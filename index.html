@@ -8,6 +8,7 @@
     <title>iamnidhikrishna</title>
     <style>
         body, html {
+            width: auto;
             margin: 0;
             padding: 0;
             background-image: url(cover.png);
@@ -52,7 +53,7 @@
         #navbar {
             padding: 10px;
             background-color: black;
-            width: 100%;
+            width: auto;
         }
 
         #navbar ul {
@@ -73,6 +74,10 @@
             margin-right: auto;
         }
 
+        #navbar ul li:nth-child(2) {
+            margin-left: 20px;
+        }
+
         /* Adding margin to the rest of the list items */
         #navbar ul li:not(:first-child) {
             margin-right: 50px; /* Adjust this value to control the spacing */
@@ -83,6 +88,7 @@
             text-decoration: none;
             color: aliceblue;
         }
+
 
         span{
             color: aqua;
@@ -113,14 +119,19 @@
             padding: 0 80px 30px 80px;
             line-height: 30px;
         }
+
+        .btn-container{
+            min-width: 500px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+        }
         
         .btn {
             background-color: aqua;
             color: black;
-            display: inline-flex;
-            justify-content: space-around;
-            align-content: flex-start;
-            padding: 10px 20px;
+            padding: 10px 20px ;
             font-size: 14px;
             font-weight: bold;
             text-align: center;
@@ -137,15 +148,19 @@
         }
         
         .icons {
+            display: inline-flex;
+            flex-wrap: wrap;
             margin: 100px;
             padding-top: 100px;
+            padding-right: 200px;
+            min-width: 200px;
+            justify-content: flex-start;
+            align-content: flex-start;
         }
         .icons i {
+            width: auto;
             background-color: aqua;
             color: black;
-            display: inline-flex;
-            justify-content: space-around;
-            align-content: flex-start;
             padding: 8px;
             margin-top: 60px;
             margin-right: 20px;
@@ -170,7 +185,7 @@
         <nav>
             <ul>
                 <li>@iamnidhikrishna</li>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="Portfolio.html" id="Home">Home</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="Nidhi_Krishna_P_V_Resume.html">Resume</a></li>
