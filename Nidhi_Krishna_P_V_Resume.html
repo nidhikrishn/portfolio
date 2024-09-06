@@ -51,8 +51,48 @@
             margin: 0;
         }
 
-        nav {
-            text-align: right;
+        nav{
+            display: flex;
+        }
+
+        nav a {
+            font-size: small;
+            padding: 20px;
+            list-style: none;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        
+        nav a:first-child{
+            color: black;
+            justify-content: flex-start;
+            align-content: flex-start;
+            margin-right: auto;
+        }
+
+        nav a:nth-last-child(){
+            color: #0056b3;
+            justify-content: flex-end;
+            align-content: flex-end;
+            margin-right: auto; /* Adjust this value to control the spacing */
+        }
+
+        nav i{
+            width: 20px;
+            background-color: transparent;
+            color: black;
+            display: inline-flex;
+            justify-content: space-around;
+            align-content: flex-start;
+            padding: 8px;
+            margin-right: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid;
+            border-radius: 100%;
         }
 
         #link {
@@ -216,6 +256,7 @@
 </head>
 <body>
     <nav>
+        <a href="index.html"><i class='bx bx-arrow-back'></i></a>
         <a href="https://drive.google.com/file/d/1C8C1RiWyEJyR59HGudM51ROc-1wh6iuP/view?usp=drivesdk">Download PDF</a>
     </nav>
     <header>
