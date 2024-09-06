@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>iamnidhikrishna/contact</title>
+    <style>
+        /* Your existing styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            background-image: url(cover.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            height: 100vh;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            z-index: 1000;
+        }
+
+        #navbar ul {
+            font-size: small;
+            padding: 20px;
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            color: aliceblue;
+            font-weight: 300;
+        }
+
+        #navbar ul li:first-child {
+            font-size: large;
+            font-weight: 700;
+            margin-right: auto;
+        }
+
+        #navbar ul li:not(:first-child) {
+            margin-right: 50px;
+            font-weight: 600;
+        }
+
+        #navbar ul li a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        span {
+            color: aqua;
+        }
+
+        .contact-container {
+            background-color: rgba(34, 34, 34, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            width: 800px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5),
+                        0 0 5px cyan,
+                        0 0 5px cyan,
+                        0 0 5px cyan;
+            border: 2px solid cyan;
+            margin: auto;
+            margin-top: 125px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 34rpx;
+            color: #fff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-size: 14px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #333;
+            color: #fff;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #00ff00;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 16px;
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #00cc00;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar"> 
+        <nav>
+            <ul>
+                <li>@iamnidhikrishna</li>
+                <li><a href="Portfolio.html">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="Nidhi_Krishna_P_V_Resume.html">Resume</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="contact-container">
+        <h1>Contact <span>Me</span></h1>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject.." required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message.." rows="6" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- EmailJS integration -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("BxoIKp8mEimi3z-lE");  // Replace 'YOUR_USER_ID' with your EmailJS User ID
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Collect form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            // Parameters to send to EmailJS
+            var templateParams = {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            };
+
+            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values
+            emailjs.send('service_noqz3kd', 'template_7cyxmtt', templateParams)
+                .then(function(response) {
+                    alert('Message sent successfully!', response.status, response.text);
+                }, function(error) {
+                    alert('Failed to send message.', error);
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">      
+    <title>iamnidhikrishna</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-image: url(cover.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+        }
+        body::after {
+            content: "";
+            position: fixed; /* Changed to fixed to cover the full viewport height */
+            top: 0;
+            right: 0;
+            width: 34vw; /* 34% of viewport width */
+            height: 100vh; /* Full viewport height */
+            background: rgba(0, 0, 0, 0.6); /* Darker overlay with opacity */
+            pointer-events: none; /* Allows clicking through the pseudo-element */
+            transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+            opacity: 1; /* Start with full opacity */
+        }
+
+        /* Fade-out effect when hovering anywhere on the right side */
+        body:hover::after {
+            opacity: 0; /* Hide the overlay on hover */
+        }
+        .fade-trigger {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 34vw;
+            height: 100vh;
+            background: transparent; /* Transparent background to catch hover */
+            z-index: 1; /* Ensure it’s on top of other content */
+            pointer-events: auto; /* Allow hover to be detected */
+        }
+
+        html {
+            background-color: #2F2F2F;
+        }
+
+        #navbar {
+            padding: 10px;
+            background-color: black;
+            width: 100%;
+        }
+
+        #navbar ul {
+            font-size: small;
+            padding: 20px;
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            color: aliceblue;
+            font-weight: 300;
+        }
+
+        #navbar ul li:first-child {
+            font-size: large;
+            font-weight: 700;
+            margin-right: auto;
+        }
+
+        /* Adding margin to the rest of the list items */
+        #navbar ul li:not(:first-child) {
+            margin-right: 50px; /* Adjust this value to control the spacing */
+            font-weight: 600;
+        }
+
+        #navbar ul li a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        span{
+            color: aqua;
+        }
+
+        .intro {
+            color: white;
+            width: 800px;
+            align-content: left;
+        }
+
+        .intro h1 {
+            padding: 100px 80px 0 80px;
+        }
+
+        .intro h1:hover{
+            color: yellow;
+            transition-delay: 1s;
+            opacity: 0.5;
+        }
+
+        .intro h3 {
+            padding: 0 80px 0 80px;
+            color: aqua;
+        }
+
+        .intro p {
+            padding: 0 80px 30px 80px;
+            line-height: 30px;
+        }
+        
+        .btn {
+            background-color: aqua;
+            color: black;
+            display: inline-flex;
+            justify-content: space-around;
+            align-content: flex-start;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid;
+            transition: background-color 0.3s, border-color 0.3s;
+            margin: 0 0 10px 100px; /* Add this line to apply a margin of 80px on all sides */
+        }
+        .btn:hover {
+            background-color: black;
+            color: white;
+            transition: all 0.75 ease;
+        }
+        
+        .icons {
+            margin: 100px;
+            padding-top: 100px;
+        }
+        .icons i {
+            background-color: aqua;
+            color: black;
+            display: inline-flex;
+            justify-content: space-around;
+            align-content: flex-start;
+            padding: 8px;
+            margin-top: 60px;
+            margin-right: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+            border: 2px solid;
+        }
+        .icons i:hover {
+            background-color: black;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div id="navbar"> 
+        <nav>
+            <ul>
+                <li>@iamnidhikrishna</li>
+                <li><a href="Portfolio.html">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="Nidhi_Krishna_P_V_Resume.html">Resume</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="intro">
+    <h1>Hi! This is <span>Nidhi Krishna P. V.</span></h1>
+    <h3>Administrative Expert</h3>
+    <p>Welcome to my Portfolio. I am an analytical professional with a BA (HONS) in Psychology, a Diploma in Computer Applications, and
+        an Advanced Diploma in Data Analysis. Currently an Electronic Data Processing Officer skilled in managing and processing
+        electronic data. Experienced in sales, operations, and administration, with a strong technical and analytical
+        skill set ready to transition into a Data Analyst role.</p>
+    </div>
+    <div class="btn-container">
+        <a href="mailto:nidhikrishna621@gmail.com?subject=Interest%20in%20Position&body=Hi%20Nidhi!%0A%0AI%20have%20recently%20come%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20regarding%20a%20position%20at%20our%20company." class="btn btn-hire">Hire me</a>
+        <a href="tel:+918086006632" class="btn btn-letstalk">Let's talk</a>
+    </div>
+
+    <div- class="icons">
+        <a href="https://www.facebook.com/iamnidhikrishna"><i class='bx bxl-facebook' ></i></a>
+        <a href="https://www.instagram.com/iamnidhikrishna"><i class='bx bxl-instagram' ></i></a>
+        <a href="https://www.linkedin.com/in/iamnidhikrishna"><i class='bx bxl-linkedin' ></i></a>
+    </div->
+
+</body>
+</html>
